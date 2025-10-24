@@ -1,0 +1,96 @@
+
+  /* Gradiente de fundo para header e footer */
+  .gradient-bg {
+    background: linear-gradient(90deg, #3a0a3a 0%, #32ff32 100%);
+  }
+
+  /* Botões de categoria - estado ativo e padrão */
+  .category-btn {
+    background-color: #3a0a3a;
+    color: white;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  .category-active {
+    background-color: #32ff32; /* lime */
+    color: #3a0a3a; /* dark-purple */
+    border-color: #32ff32;
+    font-weight: 700;
+  }
+  .category-btn:hover:not(.category-active) {
+    background-color: #32ff32;
+    color: #3a0a3a;
+    border-color: #32ff32;
+  }
+
+  /* Cards de produto */
+  .product-card {
+    background-color: #1f1f1f;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 8px 15px rgba(50, 255, 50, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  .product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(50, 255, 50, 0.5);
+  }
+
+  /* Imagens de produto - com borda arredondada */
+  .product-img {
+    border-radius: 1rem;
+    object-fit: contain;
+    max-height: 180px;
+    margin-bottom: 1rem;
+  }
+
+  /* Títulos dos produtos */
+  .product-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #32ff32;
+  }
+
+  /* Preço do produto */
+  .product-price {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #b2ffb2;
+  }
+
+  /* Botão adicionar ao carrinho */
+  .btn-add-cart {
+    margin-top: 1rem;
+    background-color: #32ff32;
+    color: #3a0a3a;
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .btn-add-cart:hover {
+    background-color: #28cc28;
+  }
+
+  /* Main tabs: Esconder tudo que não está ativo */
+  .tab-content {
+    display: block;
+  }
+  .tab-content.hidden {
+    display: none;
+  }
+
+  /* Scroll suave para links */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Ajuste para o container */
+  .container {
+    max-width: 1200px;
+  }
