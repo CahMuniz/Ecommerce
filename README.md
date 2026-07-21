@@ -1,76 +1,119 @@
-# 🐾 MYPet - Sistema de Gerenciamento de Pets
+# 🛒 Ecommerce - Plataforma de Comércio Eletrônico
 
 <div align="center">
 
-![Status](https://img.shields.io/badge/Projeto-Desenvolvimento-green)
-![Banco de Dados](https://img.shields.io/badge/Database-Relacional-blue)
-![Git](https://img.shields.io/badge/Git-Versionamento-orange)
+![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-blue)
+![Projeto](https://img.shields.io/badge/Tipo-Ecommerce-orange)
+![Git](https://img.shields.io/badge/Versionamento-Git-red)
 
 </div>
 
 ---
 
-# 📌 Visão Geral do Projeto
+# 📌 Sobre o Projeto
 
-O **MYPet** é um sistema desenvolvido para gerenciamento de informações relacionadas a animais de estimação, permitindo cadastrar, consultar e organizar dados importantes dos pets e seus responsáveis.
+O **Ecommerce** é uma aplicação Web desenvolvida com o objetivo de simular uma plataforma completa de vendas online, permitindo o gerenciamento de produtos, usuários, pedidos e operações relacionadas ao comércio eletrônico.
 
-A aplicação foi criada com o objetivo de aplicar conceitos de desenvolvimento de sistemas, integração entre interface, lógica de negócio e banco de dados.
+O projeto foi desenvolvido aplicando conceitos fundamentais da Engenharia de Software, incluindo:
 
-O sistema permite centralizar informações que normalmente são armazenadas manualmente, oferecendo uma solução digital organizada, segura e de fácil utilização.
+- Arquitetura de sistemas;
+- Desenvolvimento Front-end;
+- Desenvolvimento Back-end;
+- Modelagem de banco de dados;
+- Operações CRUD;
+- Organização de código;
+- Controle de versão utilizando Git.
 
----
-
-# 🎯 Objetivos
-
-O projeto tem como principais objetivos:
-
-- Criar uma plataforma para gerenciamento de animais;
-- Aplicar conceitos de CRUD (Create, Read, Update e Delete);
-- Trabalhar integração entre aplicação e banco de dados;
-- Desenvolver uma estrutura organizada e escalável;
-- Aplicar conceitos de modelagem de dados;
-- Praticar arquitetura de sistemas.
+A aplicação busca representar o funcionamento de uma loja virtual real, permitindo que usuários possam visualizar produtos, gerenciar compras e acompanhar informações relacionadas aos pedidos.
 
 ---
 
-# 🏛️ Arquitetura do Sistema
+# 🎯 Objetivos do Sistema
 
-O projeto segue uma arquitetura dividida em camadas:
+O projeto possui como objetivos:
+
+- Criar uma plataforma de vendas online;
+- Permitir gerenciamento de produtos;
+- Armazenar informações dos clientes;
+- Controlar pedidos realizados;
+- Integrar aplicação com banco de dados;
+- Aplicar boas práticas de desenvolvimento.
+
+---
+
+# 🏗️ Arquitetura do Sistema
+
+A aplicação segue uma arquitetura dividida em camadas:
 
 ```
-                 CLIENTE
-                    |
-                    |
+                 USUÁRIO
+
+                    ↓
+
               FRONT-END
-                    |
-                    |
-              BACK-END / API
-                    |
-                    |
-             CAMADA DE DADOS
-                    |
-                    |
-              BANCO DE DADOS
+
+                    ↓
+
+             API / BACK-END
+
+                    ↓
+
+          CAMADA DE NEGÓCIO
+
+                    ↓
+
+            BANCO DE DADOS
+
 ```
-
-## Funcionamento:
-
-1. Usuário acessa a interface do sistema;
-2. Realiza uma ação (cadastro, consulta, alteração ou exclusão);
-3. Front-end envia uma requisição;
-4. Back-end processa a informação;
-5. Banco de dados executa a operação;
-6. Resultado retorna para o usuário.
 
 ---
 
-# 🛠️ Tecnologias Utilizadas
+# 🔄 Fluxo da Aplicação
+
+Funcionamento:
+
+```
+Cliente acessa sistema
+
+        ↓
+
+Visualiza produtos
+
+        ↓
+
+Seleciona produtos
+
+        ↓
+
+Adiciona ao carrinho
+
+        ↓
+
+Realiza pedido
+
+        ↓
+
+Sistema valida informações
+
+        ↓
+
+Dados armazenados no Banco
+
+        ↓
+
+Pedido confirmado
+
+```
+
+---
+
+# 💻 Tecnologias Utilizadas
 
 ## Front-End
 
-Responsável pela interface gráfica.
+Responsável pela interface visual da aplicação.
 
-Tecnologias:
+Tecnologias utilizadas:
 
 - HTML5
 - CSS3
@@ -78,30 +121,25 @@ Tecnologias:
 
 Responsabilidades:
 
-- Criar telas;
-- Capturar informações do usuário;
-- Exibir dados cadastrados;
-- Melhorar experiência de navegação.
+- Criação das páginas;
+- Exibição dos produtos;
+- Interação com usuário;
+- Organização visual;
+- Responsividade.
 
 ---
 
 # ⚙️ Back-End
 
-Responsável pelas regras de negócio.
+Responsável pela lógica da aplicação.
 
 Funções:
 
-- Receber requisições;
-- Validar informações;
-- Executar operações no banco;
-- Retornar respostas para o usuário.
-
-Operações realizadas:
-
-- Inserção de dados;
-- Consulta;
-- Atualização;
-- Exclusão.
+- Gerenciamento das regras de negócio;
+- Comunicação com banco de dados;
+- Controle das requisições;
+- Validação dos dados;
+- Processamento dos pedidos.
 
 ---
 
@@ -109,41 +147,54 @@ Operações realizadas:
 
 ## Objetivo
 
-O banco de dados é responsável por armazenar todas as informações do sistema de forma estruturada.
+O banco de dados é responsável por armazenar todas as informações importantes do sistema.
 
-O modelo utilizado segue o conceito de:
+As informações são organizadas utilizando:
 
-- Organização por tabelas;
+- Tabelas;
 - Chaves primárias;
 - Chaves estrangeiras;
 - Relacionamentos;
-- Integridade dos dados.
+- Integridade referencial.
 
 ---
 
 # 📊 Modelo Entidade Relacionamento
 
-Representação:
+Modelo conceitual:
 
 ```
-USUARIO
-   |
-   |
-   | 1:N
-   |
-   |
-PET
-   |
-   |
-   | 1:N
-   |
-   |
-CONSULTA
+
+USUÁRIO
+
+ 1
+
+ |
+
+ |
+
+ N
+
+PEDIDO
+
+ |
+
+ |
+
+ N
+
+ITEM_PEDIDO
+
+ |
+
+ |
+
+ 1
+
+PRODUTO
+
+
 ```
-
-Um usuário pode possuir vários pets.
-
-Um pet pode possuir vários registros de acompanhamento.
 
 ---
 
@@ -152,274 +203,365 @@ Um pet pode possuir vários registros de acompanhamento.
 Banco:
 
 ```
-mypet_database
+ecommerce_database
 ```
 
 Estrutura:
 
 ```
-📂 Banco MYPet
+📂 Banco Ecommerce
 
-├── usuario
-│
-├── pet
-│
-├── consulta
-│
-└── historico_pet
+├── usuarios
+
+├── produtos
+
+├── categorias
+
+├── pedidos
+
+├── itens_pedido
+
+└── pagamentos
+
 ```
 
 ---
 
-# 👤 Tabela Usuario
+# 👤 Tabela Usuários
 
-Responsável por armazenar os donos dos animais.
+Responsável pelos clientes cadastrados.
 
-## Estrutura:
+## Campos:
 
 | Campo | Tipo | Descrição |
 |-|-|-|
-| id_usuario | INT | Identificador único |
-| nome | VARCHAR | Nome completo |
-| email | VARCHAR | Email de acesso |
+| id_usuario | INT | Identificador |
+| nome | VARCHAR | Nome cliente |
+| email | VARCHAR | Email |
+| senha | VARCHAR | Senha |
 | telefone | VARCHAR | Contato |
-| senha | VARCHAR | Senha criptografada |
-
----
-
-## SQL:
-
-```sql
-CREATE TABLE usuario (
-
-id_usuario INT PRIMARY KEY AUTO_INCREMENT,
-
-nome VARCHAR(100) NOT NULL,
-
-email VARCHAR(100) UNIQUE NOT NULL,
-
-telefone VARCHAR(20),
-
-senha VARCHAR(255) NOT NULL
-
-);
-```
-
----
-
-# 🐶 Tabela Pet
-
-Armazena informações dos animais.
-
-## Estrutura:
-
-| Campo | Tipo | Descrição |
-|-|-|-|
-| id_pet | INT | Identificador |
-| nome | VARCHAR | Nome do animal |
-| especie | VARCHAR | Tipo do animal |
-| raca | VARCHAR | Raça |
-| idade | INT | Idade |
-| peso | DECIMAL | Peso |
-| id_usuario | INT | Dono responsável |
-
----
-
-## SQL:
-
-```sql
-CREATE TABLE pet (
-
-id_pet INT PRIMARY KEY AUTO_INCREMENT,
-
-nome VARCHAR(100) NOT NULL,
-
-especie VARCHAR(50),
-
-raca VARCHAR(50),
-
-idade INT,
-
-peso DECIMAL(5,2),
-
-id_usuario INT,
-
-FOREIGN KEY(id_usuario)
-
-REFERENCES usuario(id_usuario)
-
-);
-```
-
----
-
-# 🏥 Tabela Consulta
-
-Armazena informações veterinárias.
-
-## Estrutura:
-
-| Campo | Tipo |
-|-|-|
-| id_consulta | INT |
-| data_consulta | DATE |
-| descricao | TEXT |
-| id_pet | INT |
 
 ---
 
 SQL:
 
 ```sql
-CREATE TABLE consulta(
+CREATE TABLE usuarios (
 
-id_consulta INT PRIMARY KEY AUTO_INCREMENT,
+id_usuario INT PRIMARY KEY AUTO_INCREMENT,
 
-data_consulta DATE,
+nome VARCHAR(100),
+
+email VARCHAR(100) UNIQUE,
+
+senha VARCHAR(255),
+
+telefone VARCHAR(20)
+
+);
+
+```
+
+---
+
+# 📦 Tabela Produtos
+
+Armazena os produtos disponíveis na loja.
+
+Campos:
+
+| Campo | Tipo |
+|-|-|
+| id_produto | INT |
+| nome | VARCHAR |
+| descricao | TEXT |
+| preco | DECIMAL |
+| estoque | INT |
+| imagem | VARCHAR |
+
+---
+
+SQL:
+
+```sql
+CREATE TABLE produtos(
+
+id_produto INT PRIMARY KEY AUTO_INCREMENT,
+
+nome VARCHAR(100),
 
 descricao TEXT,
 
-id_pet INT,
+preco DECIMAL(10,2),
 
-FOREIGN KEY(id_pet)
+estoque INT,
 
-REFERENCES pet(id_pet)
+imagem VARCHAR(255)
 
 );
+
+```
+
+---
+
+# 🏷️ Tabela Categorias
+
+Organiza os produtos.
+
+Exemplo:
+
+- Eletrônicos;
+- Informática;
+- Roupas;
+- Acessórios.
+
+Estrutura:
+
+| Campo | Tipo |
+|-|-|
+| id_categoria | INT |
+| nome | VARCHAR |
+
+---
+
+SQL:
+
+```sql
+CREATE TABLE categorias(
+
+id_categoria INT PRIMARY KEY AUTO_INCREMENT,
+
+nome VARCHAR(100)
+
+);
+
+```
+
+---
+
+# 🛒 Tabela Pedidos
+
+Responsável pelo controle das compras.
+
+Campos:
+
+| Campo | Tipo |
+|-|-|
+| id_pedido | INT |
+| data | DATE |
+| status | VARCHAR |
+| valor_total | DECIMAL |
+| id_usuario | INT |
+
+---
+
+SQL:
+
+```sql
+CREATE TABLE pedidos(
+
+id_pedido INT PRIMARY KEY AUTO_INCREMENT,
+
+data_pedido DATE,
+
+status VARCHAR(50),
+
+valor_total DECIMAL(10,2),
+
+id_usuario INT,
+
+FOREIGN KEY(id_usuario)
+
+REFERENCES usuarios(id_usuario)
+
+);
+
+```
+
+---
+
+# 📋 Tabela Item Pedido
+
+Relaciona produtos aos pedidos.
+
+Campos:
+
+| Campo | Tipo |
+|-|-|
+| id_item | INT |
+| quantidade | INT |
+| valor | DECIMAL |
+| id_pedido | INT |
+| id_produto | INT |
+
+---
+
+SQL:
+
+```sql
+CREATE TABLE itens_pedido(
+
+id_item INT PRIMARY KEY AUTO_INCREMENT,
+
+quantidade INT,
+
+valor DECIMAL(10,2),
+
+id_pedido INT,
+
+id_produto INT,
+
+
+FOREIGN KEY(id_pedido)
+
+REFERENCES pedidos(id_pedido),
+
+
+FOREIGN KEY(id_produto)
+
+REFERENCES produtos(id_produto)
+
+);
+
 ```
 
 ---
 
 # 🔗 Relacionamentos
 
-## Usuário → Pets
-
-Relacionamento:
+## Usuário e Pedido
 
 ```
-Usuario 1 -------- N Pet
+Usuário 1 ---- N Pedido
+
 ```
 
-Um usuário pode cadastrar vários animais.
+Um usuário pode realizar vários pedidos.
 
 ---
 
-## Pet → Consulta
-
-Relacionamento:
+## Pedido e Produto
 
 ```
-Pet 1 -------- N Consulta
+Pedido N ---- N Produto
+
 ```
 
-Um animal pode possuir vários registros.
+Um pedido pode possuir vários produtos.
 
 ---
 
-# 📥 Inserindo Dados
+# 📥 Operações CRUD
 
-Exemplo:
+O sistema trabalha com:
 
-## Cadastro usuário:
+## Create
+
+Cadastro de:
+
+- Usuários;
+- Produtos;
+- Pedidos.
+
+---
+
+## Read
+
+Consulta:
+
+- Lista de produtos;
+- Dados dos clientes;
+- Histórico de pedidos.
+
+---
+
+## Update
+
+Atualização:
+
+- Produtos;
+- Estoque;
+- Dados pessoais.
+
+---
+
+## Delete
+
+Remoção:
+
+- Produtos;
+- Registros cadastrados.
+
+---
+
+# 🔎 Consultas SQL
+
+## Listar produtos:
 
 ```sql
-INSERT INTO usuario
-(nome,email,telefone,senha)
+SELECT * FROM produtos;
 
-VALUES
-
-('Ana','ana@email.com','31999999999','123456');
 ```
 
 ---
 
-## Cadastro Pet:
+## Buscar pedidos de usuário:
 
 ```sql
-INSERT INTO pet
+SELECT *
 
-(nome,especie,raca,idade,peso,id_usuario)
+FROM pedidos
 
-VALUES
+WHERE id_usuario = 1;
 
-('Thor','Cachorro','Golden','3',30.5,1);
 ```
 
 ---
 
-# 🔎 Consultando Informações
-
-## Listar todos os pets:
-
-```sql
-SELECT * FROM pet;
-```
-
----
-
-## Buscar pets de um usuário:
+## Produtos vendidos:
 
 ```sql
 SELECT 
 
-usuario.nome,
+produto.nome,
 
-pet.nome
+item.quantidade
 
-FROM usuario
+FROM produtos produto
 
-INNER JOIN pet
+INNER JOIN itens_pedido item
 
-ON usuario.id_usuario = pet.id_usuario;
+ON produto.id_produto = item.id_produto;
+
 ```
 
 ---
 
-# ✏️ Atualização de Dados
+# 🔐 Segurança
 
-Exemplo:
+Boas práticas aplicadas:
 
-```sql
-UPDATE pet
+✔ Validação de dados;
 
-SET idade = 4
+✔ Controle de acesso;
 
-WHERE id_pet = 1;
-```
+✔ Proteção de informações;
 
----
+✔ Organização das permissões;
 
-# ❌ Exclusão de Dados
-
-```sql
-DELETE FROM pet
-
-WHERE id_pet = 1;
-```
-
----
-
-# 🔐 Boas Práticas no Banco
-
-O projeto utiliza:
-
-✔ Chaves primárias  
-✔ Relacionamentos com Foreign Key  
-✔ Validação de campos obrigatórios  
-✔ Organização normalizada dos dados  
-✔ Controle de integridade  
+✔ Separação Front-end e Back-end.
 
 ---
 
 # 🚀 Instalação do Projeto
 
-## Pré-requisitos:
+## Requisitos
 
 Instalar:
 
 - Git
 - Node.js
-- Banco de Dados utilizado
+- Banco de dados utilizado
 - Editor de código
 
 ---
@@ -427,30 +569,33 @@ Instalar:
 # Clonar o projeto
 
 ```bash
-git clone https://github.com/CahMuniz/MYPet.git
+git clone https://github.com/CahMuniz/Ecommerce.git
+
 ```
 
 ---
 
-# Acessar pasta
+# Instalar dependências
 
 ```bash
-cd MYPet
+npm install
+
 ```
 
 ---
 
-# Configurar Banco de Dados
+# Configuração Banco de Dados
 
-1. Criar banco:
+Criar banco:
 
 ```sql
-CREATE DATABASE mypet_database;
+CREATE DATABASE ecommerce_database;
+
 ```
 
-2. Executar scripts SQL;
+Executar scripts SQL.
 
-3. Configurar conexão no arquivo:
+Configurar arquivo:
 
 ```
 .env
@@ -465,93 +610,136 @@ DATABASE_USER=root
 
 DATABASE_PASSWORD=senha
 
-DATABASE_NAME=mypet_database
+DATABASE_NAME=ecommerce_database
+
 ```
 
 ---
 
-# Executar Aplicação
-
-Instalar dependências:
-
-```bash
-npm install
-```
-
-Executar:
+# Executar aplicação
 
 ```bash
 npm start
+
 ```
 
 ou
 
 ```bash
 npm run dev
+
 ```
 
 ---
 
-# 🔄 Controle de Versão
+# 📁 Organização do Projeto
 
-O projeto utiliza Git.
-
-Fluxo:
+Exemplo:
 
 ```
-Alteração
-   |
-git add
-   |
-git commit
-   |
-git push
-   |
-GitHub
+Ecommerce
+
+│
+
+├── src
+
+│
+
+├── components
+
+│
+
+├── pages
+
+│
+
+├── services
+
+│
+
+├── database
+
+│
+
+├── assets
+
+│
+
+└── README.md
+
 ```
 
 ---
 
-# 📚 Conceitos Aplicados
+# 🔧 Versionamento Git
 
-Durante o desenvolvimento foram aplicados:
+Principais comandos:
 
-- CRUD completo;
-- Banco de dados relacional;
-- Modelagem ER;
-- SQL;
-- Integração Front-end e Back-end;
-- Arquitetura de software;
-- Versionamento Git;
-- Organização profissional de projeto.
+Adicionar alterações:
+
+```bash
+git add .
+
+```
+
+Criar commit:
+
+```bash
+git commit -m "Atualização Ecommerce"
+
+```
+
+Enviar:
+
+```bash
+git push origin main
+
+```
 
 ---
 
 # 🔮 Melhorias Futuras
 
-Possíveis implementações:
+Possíveis evoluções:
 
-- Login com autenticação JWT;
-- Controle de usuários;
-- Dashboard administrativo;
-- Upload de fotos;
-- Agendamento veterinário;
-- Notificações;
-- Aplicativo Mobile;
-- Deploy em nuvem.
+- Sistema de login;
+- Autenticação JWT;
+- Painel administrativo;
+- Integração pagamento online;
+- Controle avançado de estoque;
+- Dashboard de vendas;
+- Deploy em nuvem;
+- Aplicativo mobile.
+
+---
+
+# 📚 Conhecimentos Aplicados
+
+Durante o desenvolvimento foram aplicados:
+
+✅ Desenvolvimento Web  
+✅ Banco de Dados Relacional  
+✅ SQL  
+✅ CRUD  
+✅ Modelagem de Dados  
+✅ Arquitetura de Software  
+✅ Git/GitHub  
+✅ Responsividade  
 
 ---
 
 # 👩‍💻 Desenvolvedora
 
-**Ana Carolina Muniz**
+## Ana Carolina Muniz
 
-🎓 Análise e Desenvolvimento de Sistemas  
-💻 Desenvolvimento Full Stack  
-🚀 Foco em programação, banco de dados e criação de soluções Web.
+🎓 Análise e Desenvolvimento de Sistemas
+
+💻 Desenvolvimento Full Stack
+
+🚀 Foco em criação de aplicações Web, Banco de Dados e soluções digitais.
 
 ---
 
 # 📄 Licença
 
-Projeto desenvolvido para estudos, portfólio e aprimoramento profissional.
+Projeto desenvolvido para estudos, aprendizado e composição de portfólio profissional **CahMuniz**.
